@@ -2,8 +2,9 @@ package xtile
 
 import "math"
 
-// ZoomForBounds copy from
-// https://stackoverflow.com/questions/4266754/how-to-calculate-google-maps-zoom-level-for-a-bounding-box-in-java
+// ZoomForBounds could determine which zoom level should be used.
+//
+// copy from https://stackoverflow.com/questions/4266754
 func ZoomForBounds(lngWest float64, latSouth float64, lngEat float64, latNorth float64) int {
 	latDiff := math.Abs(latNorth - latSouth)
 	lngDiff := math.Abs(lngWest - lngEat)
